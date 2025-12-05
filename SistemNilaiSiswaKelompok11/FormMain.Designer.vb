@@ -39,14 +39,18 @@ Partial Class FormMain
         Me.buttonInputNilai = New System.Windows.Forms.Button()
         Me.labelLaporan = New System.Windows.Forms.Label()
         Me.dgvNilai = New System.Windows.Forms.DataGridView()
+        Me.panelLaporan = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.columnNIM = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnNama = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnJenisKelamin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnKelas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnKehadiran = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnTugas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnUTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnUAS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.columnAkhir = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.columnKategori = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.panelLaporan = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.columnTotalNilai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.columnNilaiAkhir = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvNilai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLaporan.SuspendLayout()
@@ -57,7 +61,7 @@ Partial Class FormMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuFile, Me.menuTools, Me.menuHelp})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(884, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1912, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -118,7 +122,7 @@ Partial Class FormMain
         Me.labelTitle.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.labelTitle.Location = New System.Drawing.Point(0, 24)
         Me.labelTitle.Name = "labelTitle"
-        Me.labelTitle.Size = New System.Drawing.Size(884, 50)
+        Me.labelTitle.Size = New System.Drawing.Size(1912, 50)
         Me.labelTitle.TabIndex = 1
         Me.labelTitle.Text = "SISTEM INFORMASI NILAI SISWA"
         Me.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -129,7 +133,7 @@ Partial Class FormMain
         Me.labelSubTitle.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.labelSubTitle.Location = New System.Drawing.Point(0, 74)
         Me.labelSubTitle.Name = "labelSubTitle"
-        Me.labelSubTitle.Size = New System.Drawing.Size(884, 25)
+        Me.labelSubTitle.Size = New System.Drawing.Size(1912, 25)
         Me.labelSubTitle.TabIndex = 2
         Me.labelSubTitle.Text = "E D U C A T I O N   M A N A G E M E N T"
         Me.labelSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -137,7 +141,7 @@ Partial Class FormMain
         'buttonDataSiswa
         '
         Me.buttonDataSiswa.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.buttonDataSiswa.Location = New System.Drawing.Point(283, 139)
+        Me.buttonDataSiswa.Location = New System.Drawing.Point(753, 139)
         Me.buttonDataSiswa.Margin = New System.Windows.Forms.Padding(40)
         Me.buttonDataSiswa.Name = "buttonDataSiswa"
         Me.buttonDataSiswa.Size = New System.Drawing.Size(140, 40)
@@ -148,7 +152,7 @@ Partial Class FormMain
         'buttonInputNilai
         '
         Me.buttonInputNilai.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.buttonInputNilai.Location = New System.Drawing.Point(446, 139)
+        Me.buttonInputNilai.Location = New System.Drawing.Point(1043, 139)
         Me.buttonInputNilai.Margin = New System.Windows.Forms.Padding(40)
         Me.buttonInputNilai.Name = "buttonInputNilai"
         Me.buttonInputNilai.Size = New System.Drawing.Size(140, 40)
@@ -182,21 +186,73 @@ Partial Class FormMain
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvNilai.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvNilai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvNilai.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.columnNama, Me.columnTugas, Me.columnUTS, Me.columnUAS, Me.columnAkhir, Me.columnKategori})
+        Me.dgvNilai.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.columnNIM, Me.columnNama, Me.columnJenisKelamin, Me.columnKelas, Me.columnKehadiran, Me.columnTugas, Me.columnUTS, Me.columnUAS, Me.columnTotalNilai, Me.columnNilaiAkhir})
         Me.dgvNilai.EnableHeadersVisualStyles = False
         Me.dgvNilai.Location = New System.Drawing.Point(35, 47)
         Me.dgvNilai.Name = "dgvNilai"
         Me.dgvNilai.ReadOnly = True
         Me.dgvNilai.RowHeadersVisible = False
         Me.dgvNilai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvNilai.Size = New System.Drawing.Size(797, 226)
+        Me.dgvNilai.Size = New System.Drawing.Size(1840, 255)
         Me.dgvNilai.TabIndex = 6
+        '
+        'panelLaporan
+        '
+        Me.panelLaporan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelLaporan.BackColor = System.Drawing.Color.Gainsboro
+        Me.panelLaporan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelLaporan.Controls.Add(Me.dgvNilai)
+        Me.panelLaporan.Controls.Add(Me.labelLaporan)
+        Me.panelLaporan.Location = New System.Drawing.Point(7, 222)
+        Me.panelLaporan.Name = "panelLaporan"
+        Me.panelLaporan.Size = New System.Drawing.Size(1893, 332)
+        Me.panelLaporan.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(0, 580)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1912, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "© 2025 Sistem Informasi Nilai Siswa – Project UTS Pemrograman Visual"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'columnNIM
+        '
+        Me.columnNIM.HeaderText = "NIM"
+        Me.columnNIM.MinimumWidth = 150
+        Me.columnNIM.Name = "columnNIM"
+        Me.columnNIM.ReadOnly = True
         '
         'columnNama
         '
         Me.columnNama.HeaderText = "Nama"
+        Me.columnNama.MinimumWidth = 150
         Me.columnNama.Name = "columnNama"
         Me.columnNama.ReadOnly = True
+        '
+        'columnJenisKelamin
+        '
+        Me.columnJenisKelamin.HeaderText = "Jenis Kelamin"
+        Me.columnJenisKelamin.MinimumWidth = 150
+        Me.columnJenisKelamin.Name = "columnJenisKelamin"
+        Me.columnJenisKelamin.ReadOnly = True
+        '
+        'columnKelas
+        '
+        Me.columnKelas.HeaderText = "Kelas"
+        Me.columnKelas.Name = "columnKelas"
+        Me.columnKelas.ReadOnly = True
+        '
+        'columnKehadiran
+        '
+        Me.columnKehadiran.HeaderText = "Kehadiran"
+        Me.columnKehadiran.Name = "columnKehadiran"
+        Me.columnKehadiran.ReadOnly = True
         '
         'columnTugas
         '
@@ -216,47 +272,23 @@ Partial Class FormMain
         Me.columnUAS.Name = "columnUAS"
         Me.columnUAS.ReadOnly = True
         '
-        'columnAkhir
+        'columnTotalNilai
         '
-        Me.columnAkhir.HeaderText = "Nilai Akhir"
-        Me.columnAkhir.Name = "columnAkhir"
-        Me.columnAkhir.ReadOnly = True
+        Me.columnTotalNilai.HeaderText = "Total Nilai"
+        Me.columnTotalNilai.Name = "columnTotalNilai"
+        Me.columnTotalNilai.ReadOnly = True
         '
-        'columnKategori
+        'columnNilaiAkhir
         '
-        Me.columnKategori.HeaderText = "Kategori"
-        Me.columnKategori.Name = "columnKategori"
-        Me.columnKategori.ReadOnly = True
-        '
-        'panelLaporan
-        '
-        Me.panelLaporan.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.panelLaporan.BackColor = System.Drawing.Color.Gainsboro
-        Me.panelLaporan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelLaporan.Controls.Add(Me.dgvNilai)
-        Me.panelLaporan.Controls.Add(Me.labelLaporan)
-        Me.panelLaporan.Location = New System.Drawing.Point(7, 220)
-        Me.panelLaporan.Name = "panelLaporan"
-        Me.panelLaporan.Size = New System.Drawing.Size(865, 293)
-        Me.panelLaporan.TabIndex = 7
-        '
-        'Label1
-        '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 541)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(884, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "© 2025 Sistem Informasi Nilai Siswa – Project UTS Pemrograman Visual"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.columnNilaiAkhir.HeaderText = "Nilai Akhir"
+        Me.columnNilaiAkhir.Name = "columnNilaiAkhir"
+        Me.columnNilaiAkhir.ReadOnly = True
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 561)
+        Me.ClientSize = New System.Drawing.Size(1912, 600)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.panelLaporan)
         Me.Controls.Add(Me.buttonInputNilai)
@@ -293,12 +325,16 @@ Partial Class FormMain
     Friend WithEvents buttonInputNilai As Button
     Friend WithEvents labelLaporan As Label
     Friend WithEvents dgvNilai As DataGridView
+    Friend WithEvents panelLaporan As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents columnNIM As DataGridViewTextBoxColumn
     Friend WithEvents columnNama As DataGridViewTextBoxColumn
+    Friend WithEvents columnJenisKelamin As DataGridViewTextBoxColumn
+    Friend WithEvents columnKelas As DataGridViewTextBoxColumn
+    Friend WithEvents columnKehadiran As DataGridViewTextBoxColumn
     Friend WithEvents columnTugas As DataGridViewTextBoxColumn
     Friend WithEvents columnUTS As DataGridViewTextBoxColumn
     Friend WithEvents columnUAS As DataGridViewTextBoxColumn
-    Friend WithEvents columnAkhir As DataGridViewTextBoxColumn
-    Friend WithEvents columnKategori As DataGridViewTextBoxColumn
-    Friend WithEvents panelLaporan As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents columnTotalNilai As DataGridViewTextBoxColumn
+    Friend WithEvents columnNilaiAkhir As DataGridViewTextBoxColumn
 End Class

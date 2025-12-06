@@ -26,7 +26,6 @@ Partial Class FormMain
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.menuFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuFileSaveData = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuFileExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuTools = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuDataSiswa = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,8 +38,6 @@ Partial Class FormMain
         Me.buttonInputNilai = New System.Windows.Forms.Button()
         Me.labelLaporan = New System.Windows.Forms.Label()
         Me.dgvNilai = New System.Windows.Forms.DataGridView()
-        Me.panelLaporan = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.columnNIM = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnNama = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnJenisKelamin = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,6 +48,8 @@ Partial Class FormMain
         Me.columnUAS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnTotalNilai = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.columnNilaiAkhir = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.panelLaporan = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvNilai, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelLaporan.SuspendLayout()
@@ -67,16 +66,10 @@ Partial Class FormMain
         '
         'menuFile
         '
-        Me.menuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuFileSaveData, Me.menuFileExit})
+        Me.menuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuFileExit})
         Me.menuFile.Name = "menuFile"
         Me.menuFile.Size = New System.Drawing.Size(37, 20)
         Me.menuFile.Text = "File"
-        '
-        'menuFileSaveData
-        '
-        Me.menuFileSaveData.Name = "menuFileSaveData"
-        Me.menuFileSaveData.Size = New System.Drawing.Size(180, 22)
-        Me.menuFileSaveData.Text = "Save Data"
         '
         'menuFileExit
         '
@@ -113,7 +106,7 @@ Partial Class FormMain
         'menuAboutApp
         '
         Me.menuAboutApp.Name = "menuAboutApp"
-        Me.menuAboutApp.Size = New System.Drawing.Size(180, 22)
+        Me.menuAboutApp.Size = New System.Drawing.Size(132, 22)
         Me.menuAboutApp.Text = "About App"
         '
         'labelTitle
@@ -196,31 +189,6 @@ Partial Class FormMain
         Me.dgvNilai.Size = New System.Drawing.Size(1840, 255)
         Me.dgvNilai.TabIndex = 6
         '
-        'panelLaporan
-        '
-        Me.panelLaporan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.panelLaporan.BackColor = System.Drawing.Color.Gainsboro
-        Me.panelLaporan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelLaporan.Controls.Add(Me.dgvNilai)
-        Me.panelLaporan.Controls.Add(Me.labelLaporan)
-        Me.panelLaporan.Location = New System.Drawing.Point(7, 222)
-        Me.panelLaporan.Name = "panelLaporan"
-        Me.panelLaporan.Size = New System.Drawing.Size(1893, 332)
-        Me.panelLaporan.TabIndex = 7
-        '
-        'Label1
-        '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 580)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1912, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "© 2025 Sistem Informasi Nilai Siswa – Project UTS Pemrograman Visual"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'columnNIM
         '
         Me.columnNIM.HeaderText = "NIM"
@@ -284,6 +252,31 @@ Partial Class FormMain
         Me.columnNilaiAkhir.Name = "columnNilaiAkhir"
         Me.columnNilaiAkhir.ReadOnly = True
         '
+        'panelLaporan
+        '
+        Me.panelLaporan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelLaporan.BackColor = System.Drawing.Color.Gainsboro
+        Me.panelLaporan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelLaporan.Controls.Add(Me.dgvNilai)
+        Me.panelLaporan.Controls.Add(Me.labelLaporan)
+        Me.panelLaporan.Location = New System.Drawing.Point(7, 222)
+        Me.panelLaporan.Name = "panelLaporan"
+        Me.panelLaporan.Size = New System.Drawing.Size(1893, 332)
+        Me.panelLaporan.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(0, 580)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1912, 20)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "© 2025 Sistem Informasi Nilai Siswa – Project UTS Pemrograman Visual"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -312,7 +305,6 @@ Partial Class FormMain
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents menuFile As ToolStripMenuItem
-    Friend WithEvents menuFileSaveData As ToolStripMenuItem
     Friend WithEvents menuFileExit As ToolStripMenuItem
     Friend WithEvents menuTools As ToolStripMenuItem
     Friend WithEvents menuDataSiswa As ToolStripMenuItem

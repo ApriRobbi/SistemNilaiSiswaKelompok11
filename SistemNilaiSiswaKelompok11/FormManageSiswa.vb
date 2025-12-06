@@ -125,6 +125,13 @@
         End If
     End Sub
 
+    'Membuat Input NAMA menjadi uppercase
+    Private Sub textNama_TextChanged(sender As Object, e As EventArgs) Handles textNama.TextChanged
+        Dim posisiStart As Integer = textNama.SelectionStart
+        textNama.Text = textNama.Text.ToUpper()
+        textNama.SelectionStart = posisiStart
+    End Sub
+
     'Handling button TAMBAH
     Private Sub buttonTambah_Click(sender As Object, e As EventArgs) Handles buttonTambah.Click
         'Validasi Input, panggil function yang sudah dibuat diatas

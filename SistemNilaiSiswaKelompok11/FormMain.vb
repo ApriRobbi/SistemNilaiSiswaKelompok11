@@ -59,18 +59,10 @@
 
     'Handle menu about app
     Private Sub menuAboutApp_Click(sender As Object, e As EventArgs) Handles menuAboutApp.Click
-        Dim info As String =
-        "APLIKASI SISTEM INFORMASI NILAI SISWA" & vbCrLf &
-        "-------------------------------------------" & vbCrLf &
-        "Dibuat oleh:" & vbCrLf &
-        "1. Nama Anggota 1 - NIM" & vbCrLf &
-        "2. Nama Anggota 2 - NIM" & vbCrLf &
-        "3. Nama Anggota 3 - NIM" & vbCrLf &
-        "4. Nama Anggota 4 - NIM (opsional)" & vbCrLf &
-        vbCrLf &
-        "Project UTS Pemrograman Visual 2025" & vbCrLf &
-        "Dosen Pengampu: Nama Dosen"
+        'Membuat instance form About
+        Dim about As New FormAbout()
 
-        MessageBox.Show(info, "About This Application", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'Menampilkan sebagai dialog (modal)
+        about.ShowDialog(Me)
     End Sub
 End Class

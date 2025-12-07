@@ -234,6 +234,7 @@
         RefreshGridSiswa()
 
         MessageBox.Show("Data siswa berhhasil di edit.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ClearInputAfterClick()
     End Sub
 
     'Hapus Button
@@ -279,6 +280,7 @@
         Else
             MessageBox.Show("Data sisiwa tiidak ditemukan.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
     End Sub
 
 End Class

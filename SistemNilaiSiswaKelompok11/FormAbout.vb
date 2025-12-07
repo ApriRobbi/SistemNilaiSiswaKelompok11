@@ -6,4 +6,8 @@
     Private Sub buttonClose_Click(sender As Object, e As EventArgs) Handles buttonClose.Click
         Me.Close()  'Menutup dialog
     End Sub
+
+    Private Sub labelTeam_Click(sender As Object, e As EventArgs) Handles labelTeam.Click
+
+    End Sub
 End Class

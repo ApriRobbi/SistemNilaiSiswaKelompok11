@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelTeam.Text" xml:space="preserve">
+    <value>Kelompok:
+- APRILIANDA AULIA ROBBI - 250401010166
+- ANNISA FITRIA RAMADHANI - 250401010019
+- SUNAN HAIKAL - 250401010065
+- MUHAMMAD GIGIN FEBRIANO - 250401020009
+
+
+Aplikasi ini dibuat untuk memenuhi
+UTS Pemrograman Visual.
+</value>
+  </data>
 </root>

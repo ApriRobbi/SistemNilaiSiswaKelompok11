@@ -22,6 +22,7 @@ Partial Class FormAbout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormAbout))
         Me.labelTitle = New System.Windows.Forms.Label()
         Me.labelTeam = New System.Windows.Forms.Label()
         Me.buttonClose = New System.Windows.Forms.Button()
@@ -42,14 +43,13 @@ Partial Class FormAbout
         Me.labelTeam.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.labelTeam.Location = New System.Drawing.Point(12, 34)
         Me.labelTeam.Name = "labelTeam"
-        Me.labelTeam.Size = New System.Drawing.Size(330, 149)
+        Me.labelTeam.Size = New System.Drawing.Size(401, 203)
         Me.labelTeam.TabIndex = 1
-        Me.labelTeam.Text = "Kelompok:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Mega London" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Anggota 2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "- Anggota 3" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Aplikasi ini dibuat untuk m" &
-    "emenuhi" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "UTS Pemrograman Visual." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.labelTeam.Text = resources.GetString("labelTeam.Text")
         '
         'buttonClose
         '
-        Me.buttonClose.Location = New System.Drawing.Point(126, 169)
+        Me.buttonClose.Location = New System.Drawing.Point(156, 240)
         Me.buttonClose.Name = "buttonClose"
         Me.buttonClose.Size = New System.Drawing.Size(100, 30)
         Me.buttonClose.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class FormAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(354, 211)
+        Me.ClientSize = New System.Drawing.Size(425, 279)
         Me.Controls.Add(Me.buttonClose)
         Me.Controls.Add(Me.labelTeam)
         Me.Controls.Add(Me.labelTitle)

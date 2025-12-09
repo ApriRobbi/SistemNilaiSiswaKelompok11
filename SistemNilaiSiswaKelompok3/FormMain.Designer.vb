@@ -22,8 +22,8 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.menuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuFileExit = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,10 +57,11 @@ Partial Class FormMain
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuFile, Me.menuTools, Me.menuHelp})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1912, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1948, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -106,7 +107,7 @@ Partial Class FormMain
         'menuAboutApp
         '
         Me.menuAboutApp.Name = "menuAboutApp"
-        Me.menuAboutApp.Size = New System.Drawing.Size(132, 22)
+        Me.menuAboutApp.Size = New System.Drawing.Size(180, 22)
         Me.menuAboutApp.Text = "About App"
         '
         'labelTitle
@@ -115,7 +116,7 @@ Partial Class FormMain
         Me.labelTitle.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.labelTitle.Location = New System.Drawing.Point(0, 24)
         Me.labelTitle.Name = "labelTitle"
-        Me.labelTitle.Size = New System.Drawing.Size(1912, 50)
+        Me.labelTitle.Size = New System.Drawing.Size(1948, 50)
         Me.labelTitle.TabIndex = 1
         Me.labelTitle.Text = "SISTEM INFORMASI NILAI SISWA"
         Me.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -126,7 +127,7 @@ Partial Class FormMain
         Me.labelSubTitle.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.labelSubTitle.Location = New System.Drawing.Point(0, 74)
         Me.labelSubTitle.Name = "labelSubTitle"
-        Me.labelSubTitle.Size = New System.Drawing.Size(1912, 25)
+        Me.labelSubTitle.Size = New System.Drawing.Size(1948, 25)
         Me.labelSubTitle.TabIndex = 2
         Me.labelSubTitle.Text = "E D U C A T I O N   M A N A G E M E N T"
         Me.labelSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -166,18 +167,18 @@ Partial Class FormMain
         'dgvNilai
         '
         Me.dgvNilai.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvNilai.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvNilai.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvNilai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvNilai.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvNilai.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvNilai.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvNilai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvNilai.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.columnNIM, Me.columnNama, Me.columnJenisKelamin, Me.columnKelas, Me.columnKehadiran, Me.columnTugas, Me.columnUTS, Me.columnUAS, Me.columnTotalNilai, Me.columnNilaiAkhir})
         Me.dgvNilai.EnableHeadersVisualStyles = False
@@ -263,16 +264,16 @@ Partial Class FormMain
         Me.panelLaporan.Controls.Add(Me.labelLaporan)
         Me.panelLaporan.Location = New System.Drawing.Point(7, 222)
         Me.panelLaporan.Name = "panelLaporan"
-        Me.panelLaporan.Size = New System.Drawing.Size(1893, 332)
+        Me.panelLaporan.Size = New System.Drawing.Size(1929, 357)
         Me.panelLaporan.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 580)
+        Me.Label1.Location = New System.Drawing.Point(0, 605)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1912, 20)
+        Me.Label1.Size = New System.Drawing.Size(1948, 20)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "© 2025 Sistem Informasi Nilai Siswa – Project UTS Pemrograman Visual"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -281,7 +282,7 @@ Partial Class FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1912, 600)
+        Me.ClientSize = New System.Drawing.Size(1948, 625)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.panelLaporan)
         Me.Controls.Add(Me.buttonInputNilai)

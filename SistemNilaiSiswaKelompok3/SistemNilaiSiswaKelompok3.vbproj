@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{68463BD6-8CBE-4D59-B896-161E679ABA11}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SistemNilaiSiswaKelompok11.My.MyApplication</StartupObject>
-    <RootNamespace>SistemNilaiSiswaKelompok11</RootNamespace>
-    <AssemblyName>SistemNilaiSiswaKelompok11</AssemblyName>
+    <StartupObject>SistemNilaiSiswaKelompok3.My.MyApplication</StartupObject>
+    <RootNamespace>SistemNilaiSiswaKelompok3</RootNamespace>
+    <AssemblyName>SistemNilaiSiswaKelompok3</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SistemNilaiSiswaKelompok11.xml</DocumentationFile>
+    <DocumentationFile>SistemNilaiSiswaKelompok3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SistemNilaiSiswaKelompok11.xml</DocumentationFile>
+    <DocumentationFile>SistemNilaiSiswaKelompok3.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
